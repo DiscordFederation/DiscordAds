@@ -1,0 +1,59 @@
+{
+	"name": "DiscordAds",
+	"version": "0.1",
+	"author": [
+		"Vivek Joshy"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:DiscordAds",
+	"descriptionmsg": "discordads-desc",
+	"license-name": "AGPL-3.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.31.0"
+	},
+	"AutoloadClasses": {
+		"MediaWiki\\Extension\\DiscordAds\\Hooks": "src/Hooks.php",
+		"MediaWiki\\Extension\\DiscordAds\\SpecialHelloWorld": "src/SpecialHelloWorld.php"
+	},
+	"ConfigRegistry": {
+		"discordads": "GlobalVarConfig::newInstance"
+	},
+	"config": {
+		"DiscordAdsEnableFoo": {
+			"value": true,
+			"description": "Whether or not the foo feature is enabled."
+		}
+	},
+	"ExtensionMessagesFiles": {
+		"DiscordAdsAlias": "DiscordAds.i18n.alias.php"
+	},
+	"Hooks": {
+		"NameOfHook": "MediaWiki\\Extension\\DiscordAds\\Hooks::onNameOfHook"
+	},
+	"MessagesDirs": {
+		"DiscordAds": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.discordAds.foo": {
+			"scripts": [
+				"ext.discordAds.js",
+				"ext.discordAds.foo.js"
+			],
+			"styles": [
+				"ext.discordAds.foo.css"
+			],
+			"messages": [],
+			"dependencies": []
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "DiscordAds/resources"
+	},
+	"SpecialPages": {
+		"HelloWorld": "MediaWiki\\Extension\\DiscordAds\\SpecialHelloWorld"
+	},
+	"manifest_version": 2
+}

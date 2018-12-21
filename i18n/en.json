@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vivek Joshy"
+		]
+	},
+	"discordads-desc": "This is an example extension",
+	"discordads-helloworld": "Hello world!",
+	"discordads-helloworld-intro": "Welcome to the \"Hello world\" special page of the DiscordAds extension.",
+	"helloworld": "Hello world",
+	"testform-section1": "Test Form",
+	"testform-subsection": "Subsection",
+	"testform-myfield1": "Howdy!",
+	"testform-myfield2": "Sup?"
+}
