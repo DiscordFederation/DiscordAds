@@ -25,14 +25,17 @@ namespace MediaWiki\Extension\DiscordAds;
 class Hooks {
 
 	/**
-	 * Hook: NameOfHook
-	 *
-	 * @param string $arg1 First argument
-	 * @param bool $arg2 Second argument
-	 * @param bool $arg3 Third argument
+	 * Hook: BeforePageDisplay
 	 */
-	public static function onNameOfHook( $arg1, $arg2, $arg3 ) {
-		// Stub
-	}
+    public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
+        global $wgDiscordAdsHeadScriptName, $wgDiscordAdsHeadScriptCode;
+
+        $out->addHeadItem($wgDiscordAdsHeadScriptName, $wgDiscordAdsHeadScriptCode);
+
+        // Always return true, indicating that parser initialization should
+        // continue normally.
+        return true;
+    }
 
 }
+

@@ -22,13 +22,23 @@
 		"DiscordAdsEnableFoo": {
 			"value": true,
 			"description": "Whether or not the foo feature is enabled."
+		},
+		"DiscordAdsHeadScriptName": {
+			"value": "<!-- No Head Script -->",
+			"description": "Name of script that goes in the <Head> tags."
+		},
+		"DiscordAdsHeadScriptCode": {
+			"value": "<!-- No Head Script -->",
+			"description": "Script code that goes in the <Head> tags."
 		}
 	},
 	"ExtensionMessagesFiles": {
 		"DiscordAdsAlias": "DiscordAds.i18n.alias.php"
 	},
 	"Hooks": {
-		"NameOfHook": "MediaWiki\\Extension\\DiscordAds\\Hooks::onNameOfHook"
+		"BeforePageDisplay": [
+			"MediaWiki\\Extension\\DiscordAds\\Hooks::onBeforePageDisplay"
+		]
 	},
 	"MessagesDirs": {
 		"DiscordAds": [
