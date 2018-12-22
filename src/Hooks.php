@@ -27,15 +27,11 @@ class Hooks {
 	/**
 	 * Hook: BeforePageDisplay
 	 */
-    public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
+    public static function onBeforePageDisplay( \OutputPage &$out, \Skin &$skin ) {
         global $wgDiscordAdsHeadScriptName, $wgDiscordAdsHeadScriptCode;
 
         $out->addHeadItem($wgDiscordAdsHeadScriptName, $wgDiscordAdsHeadScriptCode);
-
-        // Always return true, indicating that parser initialization should
-        // continue normally.
         return true;
     }
 
 }
-
